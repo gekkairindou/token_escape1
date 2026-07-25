@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>刀剣男士情報</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #e6d4f0; /* 薄紫 */
+        font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    }
+
+    /* 右上の丸ボタン（濃い紫＋白バツ） */
+    .close-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: #4b007d; /* 濃い紫 */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .close-btn span {
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    /* 番号欄 */
+    .number-box {
+        background: #7a1a1a; /* 暗めの赤 */
+        color: white;
+        font-size: 24px;
+        padding: 10px 15px;
+        border-radius: 8px 8px 0 0;
+        width: 300px;
+    }
+
+    /* 情報欄 */
+    .info-box {
+        background: #fff4d6; /* クリーム色 */
+        color: black;
+        padding: 15px;
+        width: 300px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .furigana {
+        font-size: 12px;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .name-kanji {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .info-line {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    /* 自己紹介欄 */
+    .self-intro {
+        margin-top: 25px;
+        background: #e6d4f0; /* 薄紫に直置き */
+        padding: 10px;
+        font-size: 16px;
+        color: black;
+        width: 300px;
+        line-height: 1.6;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- 右上のバツボタン -->
+<a href="./dictionary.html" class="close-btn">
+    <span>×</span>
+</a>
+
+<!-- 番号欄 -->
+<div class="number-box">
+    89番
+</div>
+
+<!-- 情報欄 -->
+<div class="info-box">
+    <span class="furigana">かせんかねさだ</span>
+    <div class="name-kanji">歌仙兼定</div>
+
+    <div class="info-line">種類：打刀</div>
+    <div class="info-line">刀派：兼定</div>
+</div>
+
+<!-- 自己紹介欄 -->
+<div class="self-intro">
+    僕は歌仙兼定。歴代兼定でも随一と呼ばれる二代目、通称之定の作さ。<br>
+    名前の由来は三十六歌仙から。風流だろう？<br>
+    ……まあ、元主が手打ちにした人数が36人だったから、と言うと、みんなどういう顔をしていいかわからなくなるようだけれど。
+</div>
+
+</body>
+</html>

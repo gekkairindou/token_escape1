@@ -1,36 +1,80 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>本丸システム</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/base_old.css">
-    <link rel="stylesheet" href="./css/main_button_old.css">
-</head>
-<body>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/menu.css">
+<link rel="stylesheet" href="./css/base_old.css">
+<link rel="stylesheet" href="./css/main_button_old.css">
+<meta charset="UTF-8">
+<title>刀剣男士一覧</title>
 
-<!-- 目録ボタン -->
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background: hsl(275, 30%, 55%); /* 紫背景 */
+        font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    }
+
+    /* タイトル：白文字＋紫縁取り */
+    .page-title {
+        font-size: 36px;
+        text-align: center;
+        color: white;
+        text-shadow: 
+            -2px -2px 0 #4b007d,
+             2px -2px 0 #4b007d,
+            -2px  2px 0 #4b007d,
+             2px  2px 0 #4b007d;
+        margin-bottom: 40px;
+    }
+
+    /* カードを2列で並べるコンテナ */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* カード番号表示（カードと同じ横幅） */
+    .card-number {
+        width: 100%;
+        background: #692e2e;
+        color: white;
+        font-size: 20px;
+        padding: 8px 0;
+        text-align: center;
+        border-radius: 6px 6px 0 0;
+        font-weight: bold;
+    }
+
+    /* カード本体（縦横比 1.39:1） */
+    .card {
+        width: 100%;
+        background: rgba(255,255,255,0.3);
+        border-radius: 0 0 10px 10px;
+        position: relative;
+
+        /* 縦横比を維持するための padding 技法 */
+        padding-top: calc(100% * 1.39);
+        overflow: hidden;
+    }
+
+    /* カード内部の配置用（絶対配置） */
+    .card-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+</head>
+
+<body>
 <header>
     <div class="mokuroku" id="mokuroku">目録</div>
 </header>
-<section class="notice">
-    <div class="notice-content first-section">
-        <h4>現在確認している不具合についてのご報告</h4>
-        <hr>
-        <p>現在、下記の不具合の発生を確認しております。</p>
-        <p><b>【不具合内容】</b></p>
-        <p>・政府施設への移動もしくは政府施設からの帰還時にエラーが発生する場合がある</p>
-        <br>
-        <p>調査・対応が完了するまで、当該地域への移動をお控えください。</p>
-        <p>ご迷惑をおかけして申し訳ございません。<br>現在、原因の調査を行なっておりますので、<br>対応が完了するまでお待ちいただきますようお願いいたします。</p>
-        <p>なお、暫定措置として下記の便利道具を受取箱へお送りいたします。</p>
-        <p>＜配布内容＞</p>
-        <p>・使い捨て転送装置×1つ</p>
-    </div>
-
-</section>
 <!-- メニュー -->
 <nav class="menu" id="menu">
     <div class="close-btn" id="closeBtn">×</div>
@@ -130,5 +174,51 @@
 </nav>
 
 <script src="menu.js"></script>
+
+<div class="page-title">刀剣男士一覧</div>
+
+<div class="card-container">
+
+    <!-- 1枚目 -->
+    <div>
+        <div class="card-number">89番</div>
+        <div class="card">
+            <a href="./kasenkanesada.html">
+                <div class="card-inner">
+                    <img src="./images/character1.png" alt="？" class="character-image"> 
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2枚目 -->
+    <div>
+        <div class="card-number">　</div>
+        <div class="card">
+            <div class="card-inner">
+            </div>
+        </div>
+    </div>
+
+    <!-- 3枚目 -->
+    <div>
+        <div class="card-number">　</div>
+        <div class="card">
+            <div class="card-inner">
+            </div>
+        </div>
+    </div>
+
+    <!-- 4枚目 -->
+    <div>
+        <div class="card-number">　</div>
+        <div class="card">
+            <div class="card-inner">
+            </div>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>

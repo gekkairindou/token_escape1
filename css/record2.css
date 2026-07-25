@@ -1,0 +1,40 @@
+/* パーツ3・4 共通：濃い紫のボックス */
+.section-box {
+    background: #4b007d;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+/* 見出し（項目1） */
+.section-title {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+/* table 共通 */
+.section-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 見出しセル（緑文字＋明朝体） */
+.section-table th {
+    background: #3a005f;
+    color: #00cc66;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    padding: 10px;
+    text-align: left;
+    width: 40%;
+    border-radius: 6px 0 0 6px;
+}
+
+/* 値セル（白文字） */
+.section-table td {
+    background: #3a005f;
+    color: white;
+    padding: 10px;
+    border-radius: 0 6px 6px 0;
+}

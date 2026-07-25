@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/record2.css">
+<link rel="stylesheet" href="./css/menu.css">
+<link rel="stylesheet" href="./css/base_old.css">
+<link rel="stylesheet" href="./css/main_button_old.css">
+<title>戦績表示</title>
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #6a0dad; /* 紫背景 */
+        font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    }
+
+    /* 和紙風の質感（半透明レイヤー） */
+    .washi-bg {
+        background: url('https://www.transparenttextures.com/patterns/paper.png');
+        background-size: cover;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    /* パーツ1：タイトル */
+    .title {
+        font-size: 32px;
+        color: white;
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+
+    /* パーツ2：審神者情報 */
+    .info-section {
+        background: rgba(255,255,255,0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .info-label {
+        background: #6a0dad; /* 紫ラベル */
+        color: white;        /* 白抜き文字 */
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    td {
+        padding: 6px;
+        vertical-align: middle;
+        font-size: 16px;
+    }
+
+    .value {
+        color: black; /* 値は黒文字 */
+        padding-left: 10px;
+    }
+
+    /* 項目1（審神者名）は黒文字で単独表示 */
+    .master-name {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: black;
+    }
+</style>
+</head>
+<body>
+    <header>
+    <div class="mokuroku" id="mokuroku">目録</div>
+</header>
+<!-- メニュー -->
+<nav class="menu" id="menu">
+    <div class="close-btn" id="closeBtn">×</div>
+    <ul>
+        <li>
+            <a href="#">
+                <div class="menu-button is-disabled triangle-red" style="--base-color:#ffffff;">
+                            出陣
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="./formation.html">
+                <div class="menu-button triangle-red" style="--base-color:#ffffff;">
+                            結成
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="menu-button is-disabled triangle-blue" style="--base-color:#ffffff;">
+                            鍛刀
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="menu-button is-disabled triangle-blue" style="--base-color:#ffffff;">
+                            刀装
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="menu-button is-disabled triangle-blue" style="--base-color:#ffffff;">
+                            手入
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="menu-button is-disabled triangle-blue" style="--base-color:#ffffff;">
+                            連結
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="menu-button is-disabled triangle-blue" style="--base-color:#ffffff;">
+                            内番
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="menu-button is-disabled triangle-yellow" style="--base-color:#ffffff;">
+                            任務
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="./menu.html">
+                <div class="menu-button triangle-yellow" style="--base-color:#ffffff;">
+                            瓦版
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="menu-button is-disabled triangle-pink" style="--base-color:#ffffff;">
+                            万屋
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="menu-button is-disabled triangle-pink" style="--base-color:#ffffff;">
+                            景趣
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="./record.html">
+                <div class="menu-button triangle-purple" style="--base-color:#ffffff;">
+                            戦績
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="./dictionary.html">
+                <div class="menu-button triangle-purple" style="--base-color:#ffffff;">
+                            刀帳
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<script src="menu.js"></script>
+
+
+<div class="washi-bg" style="margin-top: 80px">
+
+    <!-- パーツ1：タイトル -->
+    <div class="title">戦績表示</div>
+
+    <!-- パーツ2：審神者情報 -->
+    <div class="info-section">
+
+        <!-- 項目1：審神者 -->
+        <div class="master-name">審神者：にいづき</div>
+
+        <!-- 項目2〜5：テーブル -->
+        <table>
+            <tr>
+                <td><span class="info-label">Lv</span></td>
+                <td class="value">1</td>
+            </tr>
+            <tr>
+                <td><span class="info-label">本拠</span></td>
+                <td class="value">肥前国</td>
+            </tr>
+            <tr>
+                <td><span class="info-label">就任日</span></td>
+                <td class="value">2209年8月7日</td>
+            </tr>
+            <tr>
+                <td><span class="info-label">経過</span></td>
+                <td class="value">0日</td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+<!-- パーツ3：本拠 -->
+<div class="section-box">
+    <div class="section-title">【本拠】</div>
+
+    <table class="section-table">
+        <tr>
+            <th>刀剣所持可能数</th>
+            <td>50口</td>
+        </tr>
+        <tr>
+            <th>刀装所持可能数</th>
+            <td>100兵</td>
+        </tr>
+        <tr>
+            <th>馬</th>
+            <td>0頭</td>
+        </tr>
+        <tr>
+            <th>部隊</th>
+            <td>1/4隊</td>
+        </tr>
+        <tr>
+            <th>鍛錬所</th>
+            <td>2/4軒</td>
+        </tr>
+        <tr>
+            <th>手入部屋</th>
+            <td>2/4室</td>
+        </tr>
+        <tr>
+            <th>景趣</th>
+            <td>0種</td>
+        </tr>
+    </table>
+</div>
+
+
+<!-- パーツ4：刀剣収集 -->
+<div class="section-box">
+    <div class="section-title">【刀剣収集】</div>
+
+    <table class="section-table">
+        <tr>
+            <th>全刀剣</th>
+            <td>1口</td>
+        </tr>
+        <tr>
+            <th>短刀</th>
+            <td>0口</td>
+        </tr>
+        <tr>
+            <th>脇差</th>
+            <td>0口</td>
+        </tr>
+        <tr>
+            <th>打刀</th>
+            <td>1口</td>
+        </tr>
+        <tr>
+            <th>太刀</th>
+            <td>0口</td>
+        </tr>
+        <tr>
+            <th>大太刀</th>
+            <td>0/4口</td>
+        </tr>
+        <tr>
+            <th>槍</th>
+            <td>0/3口</td>
+        </tr>
+        <tr>
+            <th>薙刀</th>
+            <td>0/3口</td>
+        </tr>
+        <tr>
+            <th>剣</th>
+            <td>0/1口</td>
+        </tr>
+    </table>
+</div>
+
+
+</body>
+</html>

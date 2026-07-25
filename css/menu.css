@@ -1,3 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: hwb(52 88% 4%);
+}
+
+header {
+    background: lab(42.13% 64.94 31.49);
+    padding: 40px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 /* ▼ 変更：目録ボタンのデザイン */
 /* 大きさを変えたい場合は width, height, padding を編集 */
 .mokuroku {
