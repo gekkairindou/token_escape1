@@ -1,0 +1,70 @@
+/* ▼ 変更：目録ボタンのデザイン */
+/* 大きさを変えたい場合は width, height, padding を編集 */
+.mokuroku {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    /* ▼ 白い淵 */
+    border: 2px solid white;
+
+    /* ▼ 緑色 → 上に行くほど白に近づくグラデーション */
+    background: linear-gradient(to top, hsl(120, 65%, 20%), #e8ffe8);
+
+    /* ▼ 文字の白＋うっすら灰色の縁取り */
+    color: white;
+    font-size: 16px; /* ← 大きさ変更はここ */
+    font-weight: bold;
+    padding: 8px 16px; /* ← ボタンサイズ調整はここ */
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* メニュー */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -130px; /* 初期状態は隠す */
+    width: 130px;
+    height: 100%;
+    background: hsl(122, 16%, 36%);
+    box-shadow: -3px 0 6px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    padding-top: 80px;
+    z-index: 2000;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 3px 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* メニューが開いた状態 */
+.menu.open {
+    right: 0;
+}
+
+/* ▼ 変更：×ボタン（アニメーションなし） */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    z-index: 3000;
+}
+
+

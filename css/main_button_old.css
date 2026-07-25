@@ -1,0 +1,74 @@
+.menu-button {
+    position: relative;
+    width: 90px;      /* 横：縦 = 2.3 : 1 の比率 */
+    height: 40px;
+    background-color: var(--base-color, #ffffff); /* ベースカラー（変更可） */
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman", "Hiragino Mincho ProN", serif;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.4); /* 下方向に小さく濃い影 */
+    font-size: 20px; /* 好きなサイズに変更 */
+    letter-spacing: 3px; /* 数値を大きくすると広がる */
+}
+
+/* 左上の直角二等辺三角形 */
+.menu-button::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid var(--triangle-color, #ff0000); /* 三角形の色（classで変更） */
+    border-right: 10px solid transparent;
+}
+
+/* ホバー時の反応 */
+.menu-button:hover {
+    background-color: var(--triangle-color, #ff0000); /* ベースカラーを三角形の色に */
+    color: white; /* 文字色を白に */
+}
+
+.menu-button:hover::before {
+    border-top-color: white; /* 三角形の色を白に */
+}
+
+.triangle-blue {
+    --triangle-color: hsl(211, 88%, 33%);
+}
+
+.triangle-red {
+    --triangle-color: hsl(0, 69%, 45%);
+}
+
+.triangle-green {
+    --triangle-color: hsl(150, 81%, 19%);
+}
+
+.triangle-orange {
+    --triangle-color: hwb(30 3% 35%);
+}
+
+.triangle-purple {
+    --triangle-color: hwb(270 4% 41%);
+}
+
+.triangle-yellow {
+    --triangle-color: lab(45.49% -0.65 52.09);
+}
+
+.triangle-pink {
+    --triangle-color: hwb(330 3% 30%);
+}
+
+.is-disabled {
+    background-color: var(--base-color, #ffffff); /* ベースカラー（変更可） */
+    color: gray; /* 文字色をグレーに */
+    cursor: not-allowed; /* カーソルを禁止マークに */
+    pointer-events: none;
+}

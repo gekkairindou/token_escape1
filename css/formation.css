@@ -1,0 +1,115 @@
+
+/* ▼ ボックス全体 */
+.split-box {
+    position: relative;
+    width: 800px;   /* ← ボックスの横幅（変更可） */
+    height: 100px;  /* ← ボックスの高さ（変更可） */
+    border: 1px solid #ccc;
+    display: flex;  /* 横並びにするためにflexboxを使用 */
+}
+
+/* ▼ 左半分（白） */
+.left-half {
+    width: 50%;     /* ★ 横並びなので width で分割 */
+    background: #ffffff;
+}
+
+/* ▼ 右半分（クリーム色） */
+.right-half {
+    width: 50%;
+    background: #fff4c7; /* ← クリーム色（変更可） */
+}
+
+/* ▼ ホームベース型バッジ（形の基本） */
+.badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;   /* ← バッジの幅（変更可） */
+    height: 30px;  /* ← バッジの高さ（変更可） */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16px; /* ← バッジ内の文字サイズ（変更可） */
+    font-weight: bold;
+    color: white;    /* ← バッジ内の文字色（変更可） */
+
+    /* ホームベース型（尖った部分が下） */
+    clip-path: polygon(
+        50% 100%,  /* 下の尖った部分（左辺に合わせるため後で調整） */
+        0% 60%,
+        0% 0%,
+        100% 0%,
+        100% 60%
+    );
+}
+
+/* ▼ バッジの色（自由に追加可能） */
+.badge-top {
+    background: hsl(48, 68%, 47%);
+}
+
+.badge-member {
+    background: hsl(208, 57%, 84%);
+}
+
+.mini-split-box {
+    position: relative;
+    width: 400px;   /* ← ボックスの横幅（変更可） */
+    height: 90px;  /* ← ボックスの高さ（変更可） */
+    border: 1px solid #ccc;
+    display: flex;  /* 横並びにするためにflexboxを使用 */
+
+}
+
+.status-right {
+    width: 40%;     /* ★ 横並びなので width で分割 */
+    border: 1px solid #ccc;
+}
+
+.status-left {
+    width: 60%;
+    border: 1px solid #ccc; 
+}
+
+.character-image {
+    margin: 10px 20px; /* 画像の周りに余白を追加 */
+    width: 100px; /* 画像の幅 */
+    height: 100px; /* 画像の高さ */
+    object-fit: cover; /* 画像をボックスに合わせて切り抜く */
+}
+
+/* ▼ 親div：ここで余白を設定 */
+.status-container {
+    padding: 10px 20px; /* ← 余白（変更可） */
+}
+
+/* ▼ 二行9列のグリッド */
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* 9列 */
+    grid-template-rows: repeat(2, 40px);   /* 2行（高さ変更可） */
+}
+
+/* ▼ マスの基本デザイン */
+.cell {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px; /* 文字サイズ（変更可） */
+}
+
+/* ▼ 1行目（項目名） */
+.label {
+    background: #f7f7f7; /* ← 項目名の背景色（変更可） */
+    font-weight: bold;
+}
+
+/* ▼ 2行目（値）— 色を自由に変更できる */
+.value {
+    background: var(--cell-color); /* ← 個別色を反映 */
+}

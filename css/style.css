@@ -1,0 +1,51 @@
+body {
+    font-family:"Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS PMincho", serif;
+    margin: 0;
+}
+
+.button-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: hwb(120 12% 51%);
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.first-section {
+    margin-top: 100px; /* ヘッダーの高さに合わせて調整 */
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice {
+    /* お知らせ表示を四角いボックスにする */
+    padding: 10px;
+    background-color: lab(100% 0.01 -0.01);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* notice内のbutton-circleの位置を枠内の右下にする */
+.notice .button-circle {
+    display: flex;
+}
+
+.notice h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+p {
+    margin-bottom: 0;
+    font-size: 14px;
+}

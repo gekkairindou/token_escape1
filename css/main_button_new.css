@@ -1,0 +1,75 @@
+/* --- カスタマイズ用の設定 --- */
+:root {
+  /* 枠線と三角形の色（ここを変えるだけで一括で色替えが可能です） */
+  --btn-color: hsl(239, 61%, 52%); /* デフォルトはドジャーブルー */
+  /* ボタンの背景色 */
+  --btn-bg: #ffffff;
+  /* ボタンの文字色 */
+  --btn-text-color: hsl(239, 61%, 52%);
+  --btn-font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "MS 明朝", "MS Mincho", "Noto Serif JP", serif;
+}
+
+/* --- ボタンと注釈を包むコンテナ --- */
+.button-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end; /* 右寄せにして注釈を右下に配置 */
+  gap: 0px;              /* ボタンと注釈の隙間 */
+  font-family: var(--btn-font-family);
+}
+
+/* --- ボタン本体 --- */
+.custom-button {
+  /* 構造・サイズ */
+  display: inline-block;
+  width: 140px;          /* ★横幅を完全に固定（お好みのサイズに） */
+  height: 30px;          /* ★縦幅を完全に固定（お好みのサイズに） */
+  padding: 0 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.1s ease; /* 0.1秒かけて滑らかに変化させる */
+  
+/* 文字装飾 */
+  color: var(--btn-text-color);
+  font-family: var(--btn-font-family);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  
+/* ★文字数が多すぎた場合の保険（上下中央に配置するための設定） */
+  line-height: 28px;     /* heightから枠線分（2px×2=4px）を引いた値を指定 */
+  white-space: nowrap;   /* 文字を途中で自動改行させない */
+  overflow: hidden;      /* 万が一枠をはみ出た文字は隠す */
+  text-overflow: ellipsis; /* 万が一はみ出た場合は「ボタンテキ...」と省略する */
+
+  /* 背景と枠線 */
+  border: 2px solid var(--btn-color);
+  
+  /* 45度の傾きで、右下（bottom right）にだけ色が付くように
+    グラデーションで三角形を作っています。
+  */
+  background: 
+    linear-gradient(135deg, transparent 12px, var(--btn-color) 12px) bottom right / 16px 16px no-repeat,
+    var(--btn-bg);
+}
+
+/* ボタンホバー時のエフェクト（お好みで調整してください） */
+.custom-button:hover {
+  opacity: 0.8;
+}
+
+/* --- 注釈テキスト --- */
+.button-note {
+  margin: 0;
+  font-size: 12px;
+  color: hsl(239, 61%, 52%);        /* 注釈の文字色 */
+  text-align: right;
+}
+
+/* --- [追加] ボタンを押した瞬間のエフェクト --- */
+.custom-button:active {
+  /* 元のサイズ（1）から一瞬「0.95倍」に縮小します。
+    指やマウスを離すと、自動的に元のサイズ（またはhoverのサイズ）に滑らかに戻ります。
+  */
+  transform: scale(0.95);
+}
