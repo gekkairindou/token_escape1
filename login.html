@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>和風ログインフォーム</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: hwb(59 82% 0%); /* 薄い藤色 */
+        font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    }
+
+    /* 和紙風背景 */
+    .washi {
+        background: url("https://www.transparenttextures.com/patterns/paper.png");
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* フォーム全体 */
+    .login-box {
+        background: rgba(255,255,255,0.85);
+        border: 3px solid #6a0dad; /* 紫の縁取り */
+        border-radius: 12px;
+        padding: 30px 40px;
+        width: 320px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    /* タイトル（和風の筆文字風） */
+    .title {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 25px;
+        color: #4b007d;
+        letter-spacing: 4px;
+        font-weight: bold;
+    }
+
+    /* ラベル（縦書き風） */
+    .label {
+        font-size: 16px;
+        margin-bottom: 6px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* 入力欄 */
+    .input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #bfa5d6;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        background: #faf7f2;
+    }
+
+    /* ボタン（和風の色） */
+    .login-btn {
+        width: 100%;
+        padding: 12px;
+        background: #6a0dad;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        cursor: pointer;
+        letter-spacing: 2px;
+    }
+
+    .login-btn:hover {
+        background: #4b007d;
+    }
+</style>
+</head>
+
+<body>
+<div class="washi">
+    <div class="login-box">
+        <div class="title">ログイン</div>
+
+        <div class="label">ユーザーID</div>
+        <input type="text" class="input" placeholder="ユーザーIDを入力">
+
+        <div class="label">パスワード</div>
+        <input type="password" class="input" placeholder="••••••">
+
+        <button class="login-btn">ログイン</button>
+    </div>
+</div>
+<script>
+    // ログインIDがsaniwa0807、パスワードが9851730246の場合に./menu.htmlを表示する簡易的なログイン処理
+    document.querySelector('.login-btn').addEventListener('click', function() {
+        const userId = document.querySelector('.input[type="text"]').value;
+        const password = document.querySelector('.input[type="password"]').value;
+
+        if (userId === 'saniwa0807' && password === '9851730246') {
+            window.location.href = './menu.html';
+        } else {
+            alert('ユーザーIDまたはパスワードが間違っています。');
+        }
+    });
+</script>
+</body>
+</html>
