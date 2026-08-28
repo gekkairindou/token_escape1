@@ -96,12 +96,12 @@
     </div>
 </div>
 <script>
-    // ログインIDがsaniwa0807、パスワードが9851730246の場合に./menu.htmlを表示する簡易的なログイン処理
+    // ログインIDがsaniwa0807、パスワードがaburaage(大文字小文字どちらでも可)の場合に./menu.htmlを表示する簡易的なログイン処理
     document.querySelector('.login-btn').addEventListener('click', function() {
         const userId = document.querySelector('.input[type="text"]').value;
         const password = document.querySelector('.input[type="password"]').value;
 
-        if (userId === 'saniwa0807' && password === '324') {
+        if (userId === 'saniwa0807' && password.toLowerCase() === 'aburaage') {
             window.location.href = './menu.html';
         } else {
             alert('ユーザーIDまたはパスワードが間違っています。');
